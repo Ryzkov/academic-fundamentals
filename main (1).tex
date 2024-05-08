@@ -52,26 +52,28 @@ Here are the points that we have laid out in this paper:
 There are different interpretations in assessing cyber attacks to users. User impact can be thought as the level of confidence a user can still use the machines he or she has accounts on. In realizing this notion, $I_u(u)$  is defined as a weighted average of $I_H(h)$ for $h \in H(u)$  with weights $c(h, u)$ .
 \begin{equation}
 \label{eq:1}
-   I_U(u)=\cfrac{\sum c(h, u)*I_H(h)}{\sum c(h,u)},\ where
+   I_U(u)=\cfrac{\sum c(h, u)*I_H(h)}{\sum c(h,u)},
+   \begin{aligned}[t]
+        \text{where } I_U(u) & \text{ is the unknown variable;} \\
+                        & I_H(h)\text{is a known variable.}
+    \end{aligned}
 \end{equation}
 
-$I_U(u)$ is the unknown variable;\\
-$I_H(h)$ is a known variable.
 
 The network impact score will allow an analyst to monitor the health of a subset or of the entire network. Intuitively, the calculation (Formula \ref{eq:2}) may be an aggregation of $I_H$, $I_S$ or $I_U$  within the subset or the entire network. Consider the target $n\in N$ and a set of weights with respect to this target. The impact score $I_H(h)$ can be defined as follows for X = H, S, U.
 \begin{equation}
 \label{eq:2}
-    I_N(n)=\cfrac{\sum (c(x, n)*I_X(x))}{\sum c(x,n)},
+    I_N(n)=\cfrac{\sum\limits_{1}^n (c(x, n)*I_X(x))}{\sum\limits_{1}^x c(x,n)},
 \end{equation}
 
 
 The attack effect reflects the impact of exploitation of a potential weakness of the system. The more attack effect on the security property of the system, the more impact caused by exploitation of the vulnerability. Risk calculation is given as
 \begin{equation}
 \label{eq:3}
-  R=\sum\limits_{i}  P_iD_i,
+  f(x)=\cfrac{1}{\sqrt{2 \pi \sigma^2}}\exp\left(-\cfrac{(x-\mu)^2}{2\sigma^2}\right)
 \end{equation}
 
-R is the system risk, $P_i$ means the probability of occurrence of ith weakness, and $D_i$ means the damage caused by the ith weakness. So the evaluation of attack effect is helpful to risk assessment.\\
+It is a formula for the probability density of a normal distribution, often used in statistics and information technology, such as modeling and data analysis. In it $\mu$ is the average value, and $\sigma^2$- dispersion.\\
 
 The security assessment technique includes the following stages: 
 \begin{enumerate}
