@@ -1,10 +1,24 @@
-\documentclass{ledger}
-
+\documentclass[preprint]{oscmjournal}
+%\documentclass[final]{oscmjournal} <-- uncomment this line and comment the previous line to use the final version
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{csquotes}
 \usepackage{amssymb}
 \usepackage{amsmath}
-\usepackage{color}
-\usepackage{graphicx}
-\usepackage{float}
+\usepackage{multirow}
+\usepackage{booktabs} 
+\usepackage{array}
+% \hypersetup{
+%     colorlinks = false,
+%     hidelinks = true,
+%     linkbordercolor = {white},
+% }
+
+\addbibresource{reference.bib}
+
+
 
 
 
@@ -20,7 +34,7 @@ Howard and Longstaff [2] described attacks as the following process. By using a 
 \subsection{Input Data Gathering}
 The figure (Fig.\ref{fig1:enter-label}) demonstrates how successful attacks penetrate multiple layers of protection. Let us consider the following input data used for the security assessment: topology of the test network (Fig.\ref{fig2:enter-label})), values of the topological metrics, especially Criticality of the hosts (calculated on the previous assessment stage), attack graph, security events.\\
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=100mm]{325.png}
     \caption{Successful attacks propagate through several protection layers}
@@ -36,18 +50,16 @@ Here are the points that we have laid out in this paper:
     \item Security does not imply protecting everything since some losses are acceptable.  
     \item Trade-offs by legitimate users differ in nature from the ones performed by attackers. 
 \end{itemize}
-    
 
-
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=100mm]{324.png}
     \caption{Topology of the test network and Criticality values}
     \label{fig2:enter-label}
 \end{figure}
-\
 
 
+\newpage
 \subsection{Impact Scores}
 There are different interpretations in assessing cyber attacks to users. User impact can be thought as the level of confidence a user can still use the machines he or she has accounts on. In realizing this notion, $I_u(u)$  is defined as a weighted average of $I_H(h)$ for $h \in H(u)$  with weights $c(h, u)$ .
 \begin{equation}
@@ -87,8 +99,8 @@ The security assessment technique includes the following stages:
 
 \subsection{Models of Hackers and Breakins}
 Respondents with these models could use them to extrapolate many different situations and use them to make many security-related decisions on their computer. Table \ref{table1:data} summarizes the major differences between the four models  \\
-
-\begin{table}[H]
+\newpage
+\begin{table}[ht]
 \centering
 \begin{tabular}{p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}}
      \hline
@@ -111,7 +123,7 @@ Respondents with these models could use them to extrapolate many different situa
 \end{table}
 
 My respondents described four distinct folk models of hackers. These models differed mainly in who they believed these hackers were, what they believed motivated these people, and how they chose which computers to break in to. Table \ref{table2:data} summarizes the four folk models of hackers.\\
-\begin{table}[H]
+\begin{table}[ht]
 \centering
 \begin{tabular}{p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}}
      \hline
@@ -120,13 +132,13 @@ My respondents described four distinct folk models of hackers. These models diff
     Identity of hacker(s) & Young technical geek & Some criminal & Professional criminal hackers &
 Young technical geek \\
      \hline
-     Level of organization &Solo, or to impress friends & Part of a criminal organization & Unspecified & Solo, but a contractor for criminals \\
+     Level of organization & Solo, or to impress friends & Part of a criminal organization & Unspecified & Solo, but a contractor for criminals \\
      \hline
-     Reason for break-ins &Cause mischief & Look for financial and personal information & Look for financial and personal information & Look for financial and personal information \\
+     Reason for break-ins & Cause mischief & Look for financial and personal information & Look for financial and personal information & Look for financial and personal information \\
      \hline
 Effects of break-ins & Lots of computer problems; requires reinstall & Possible harm to computer; exposure of personal information  & No harm to computer; exposure of personal information & Exposure of personal information \\
     \hline
-    Target(s) & Anyone; doesn’t matter &Opportunistic; could be me & Not me; only looking for rich or important people & Not me; looking for large databases of info \\
+    Target(s) & Anyone; doesn’t matter & Opportunistic; could be me & Not me; only looking for rich or important people & Not me; looking for large databases of info \\
      \hline
      Am I a target?  &Possibly &Possibly & No & No \\
       \hline
